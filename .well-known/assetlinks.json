@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bh2xol.status",
+      "sha256_cert_fingerprints": [
+        "10:55:1C:DF:C9:EE:84:BF:68:6F:71:67:7E:3E:C8:56:5C:29:5A:10:41:95:A5:3A:75:17:BC:F4:66:56:B8:81"
+      ]
+    }
+  }
+]

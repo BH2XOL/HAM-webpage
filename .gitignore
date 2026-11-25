@@ -1,0 +1,12 @@
+# Local backup files
+index.html.bak-*
+
+# Local AI / Trellis workflow files
+.agent/
+.trellis/
+AGENTS.md
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*.log
