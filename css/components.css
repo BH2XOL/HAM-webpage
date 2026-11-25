@@ -54,3 +54,104 @@ html[data-theme="dark"] .icon-moon {
   display: none;
 }
 
+/* Avatar */
+.avatar-row {
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  padding: 3px;
+  border-radius: var(--md-shape-full);
+  background-color: var(--md-sys-color-primary-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: var(--md-elevation-2);
+  transition: background-color 0.3s var(--md-motion-emphasized), border-color 0.3s var(--md-motion-emphasized);
+}
+
+.avatar img {
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--md-shape-full);
+  object-fit: cover;
+  display: block;
+}
+
+/* MD3 Main Elevated / Tonal Card */
+.card {
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-shape-extra-large);
+  padding: 1.75rem 1.35rem 1.35rem;
+  box-shadow: var(--md-elevation-1);
+  transition:
+    background-color 0.3s var(--md-motion-emphasized),
+    border-color 0.3s var(--md-motion-emphasized),
+    box-shadow 0.3s var(--md-motion-emphasized);
+}
+
+/* Profile Header */
+.header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.callsign {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--md-sys-color-on-surface);
+  transition: color 0.3s var(--md-motion-emphasized);
+}
+
+.sub {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  letter-spacing: 0.04em;
+}
+
+.cq {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--md-sys-color-on-surface-variant);
+  font-style: italic;
+  opacity: 0.85;
+  letter-spacing: 0.08em;
+}
+
+/* Radio Status Badge Wrapper (Borderless, Clean Alignment) */
+.status-badge-wrap {
+  margin-top: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08));
+}
+
+.status-badge-wrap:empty {
+  display: none;
+}
+
+/* MD3 Hairline Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--md-sys-color-outline-variant);
+  opacity: 0.65;
+  margin: 0 0 1.15rem;
+}
+
