@@ -1,0 +1,56 @@
+/* Material Design 3 (MD3) Components */
+
+/* MD3 Filled Tonal Icon Button (Theme Toggle) */
+.theme-toggle {
+  user-select: none;
+  -webkit-user-select: none;
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--md-shape-full);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+  box-shadow: var(--md-elevation-1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.2s var(--md-motion-emphasized),
+    color 0.2s var(--md-motion-emphasized),
+    border-color 0.2s var(--md-motion-emphasized),
+    transform 0.15s var(--md-motion-emphasized);
+}
+
+.theme-toggle:hover {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-color: transparent;
+}
+
+.theme-toggle:active {
+  transform: scale(0.92);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+html:not([data-theme="dark"]) .icon-sun,
+html[data-theme="dark"] .icon-moon {
+  display: none;
+}
+
