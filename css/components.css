@@ -155,3 +155,150 @@ html[data-theme="dark"] .icon-moon {
   margin: 0 0 1.15rem;
 }
 
+/* MD3 Tonal List Cards */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.links a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: var(--md-shape-large);
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.2s var(--md-motion-emphasized),
+    transform 0.15s var(--md-motion-emphasized),
+    box-shadow 0.2s var(--md-motion-emphasized);
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  pointer-events: none;
+  transition: background-color 0.18s var(--md-motion-emphasized);
+}
+
+.links a:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+.links a:hover::after {
+  background-color: var(--md-state-hover);
+}
+
+.links a:active {
+  transform: scale(0.985);
+}
+
+.links a:active::after {
+  background-color: var(--md-state-pressed);
+}
+
+.links a:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+/* MD3 Leading Tonal Icon Container */
+.icon-box {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--md-shape-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  transition:
+    background-color 0.2s var(--md-motion-emphasized),
+    color 0.2s var(--md-motion-emphasized),
+    transform 0.2s var(--md-motion-emphasized);
+}
+
+.links a:hover .icon-box {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.icon-box svg {
+  width: 19px;
+  height: 19px;
+}
+
+.link-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.link-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--md-sys-color-on-surface);
+  letter-spacing: 0.01em;
+}
+
+.link-desc {
+  font-size: 0.75rem;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.external-hint {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  opacity: 0.75;
+  transition: opacity 0.2s var(--md-motion-emphasized), transform 0.2s var(--md-motion-emphasized), color 0.2s var(--md-motion-emphasized);
+}
+
+.external-hint svg {
+  width: 16px;
+  height: 16px;
+}
+
+.links a:hover .external-hint {
+  opacity: 1;
+  color: var(--md-sys-color-primary);
+  transform: translateX(2px);
+}
+
+#email-link .external-hint {
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--md-shape-full);
+  background-color: var(--md-sys-color-surface-container-highest);
+  opacity: 1;
+}
+
+#email-link:hover .external-hint {
+  transform: none;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+#email-link.is-copied .external-hint {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-weight: 600;
+}
+
